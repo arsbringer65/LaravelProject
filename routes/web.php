@@ -1,5 +1,5 @@
 <?php
-
+use App\Models\Todo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+	return view('todo', [
+		'todos' => Todo::all()
+	]);
+
+});
+Route::get('/items', function () {
+	return view('todo', [
+		'todos' => Todo::all()
+	]);
+
 });
 Route::get('/login', function () {
     return view('login');
