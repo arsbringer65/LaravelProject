@@ -13,4 +13,9 @@ class Todo extends Model
     {
     	return $this->hasMany(Item::class);
     }
+
+    public function users()
+    {
+    	return $this->belongsTo(User::class);
+    }
 }

@@ -15,11 +15,10 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedbigInteger('todo_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('todo_id')->references('id')->on('todos');
-            $table->string('item_name');
+            $table->foreignId('todo_id')->references('id')->on('todos')->onDelete('cascade');
+            // $table->unsignedBigInteger('todo_id');
+            // $table->foreign('todo_id')->references('id')->on('todos')->onDelete('cascade');
+            $table->string('name');
             $table->string('status');
             $table->timestamps();
         });

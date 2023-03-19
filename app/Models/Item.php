@@ -9,7 +9,7 @@ class Item extends Model
 {
     use HasFactory;
 
-    public function todo()
+    public function todos()
     {
     	return $this->belongsTo(Todo::class);
     }
