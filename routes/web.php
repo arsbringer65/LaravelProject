@@ -22,12 +22,12 @@ Route::get('/todos', function () {
 	return Todo::all();
 });
 
-Route::get('/todos/{id}', function (Todo $id) {
-	return Item::find($id)->todos;
+Route::get('/todos/{id}', function ($id) {
+	return Todo::with('items')->where('id', $id)->get();
 });
 
-Route::get('items/{id}', function (Item $id) {
-	return $id::find($id);
+Route::get('items/{id}', function ($id) {
+	return Item::find($id);
 });
 
 Route::get('/items', function () {
