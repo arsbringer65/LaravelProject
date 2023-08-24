@@ -1,0 +1,135 @@
+/* styles.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    max-width: 500px;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    background-color: #4C5989;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.todo-item a{
+    text-decoration: none;
+    color: #ccc;
+}
+
+.todo-title {
+    flex: 1;
+}
+
+.delete-button {
+    background-color: #F2441E;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.add-button {
+    background-color: #4C5989;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.logout-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* Items */
+.back-button {
+    background-color: #888;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    color: #ccc;
+}
+
+.item-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #4C5989;
+    margin-bottom: 10px;
+}
+
+/* authentication */
+
+.form-input {
+    width: 400px;
+    height: 100;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.submit-button {
+    width: 400px;
+    height: 100;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #4C5989;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-input,
+.submit-button {
+    margin: 10px;
+}
+
+.submit-button:hover {
+    background-color: #3D476D;
+}
+
+/* Create Todods */
+.form-textarea {
+    width: 80%;
+    height: 80%;
+}
